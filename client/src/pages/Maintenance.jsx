@@ -10,7 +10,7 @@ function Maintenance() {
         className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 object-contain mb-6"
       />
       <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl">
-        Our website is currently undergoing scheduled maintenance.
+        Our website is currently undergoing scheduled maintenance
       </p>
     </div>
   );
