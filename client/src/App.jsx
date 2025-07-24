@@ -1,9 +1,13 @@
+import {Route,Routes,BrowserRouter} from 'react-router-dom'
+import Maintenance from './pages/Maintenance'
 function App() {
 
   return (
-    <div className="text-amber-400">
-      hi
-    </div>
+   <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Maintenance></Maintenance>} />
+      </Routes>
+   </BrowserRouter>
   )
 }
 
