@@ -331,7 +331,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Enhanced Services Section */}
-      <section className="py-20 bg-slate-50 dark:bg-gray-900">
+      {/* <section className="py-20 bg-slate-50 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -379,7 +379,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Enhanced Contact Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-amber-50">
         <div className="max-w-4xl mx-auto px-4">
