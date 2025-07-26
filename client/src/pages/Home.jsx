@@ -162,14 +162,14 @@ export default function HomePage() {
       {/* Enhanced Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Parallax Effect */}
-        <div
+        <div 
           className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105"
           style={{ backgroundImage: `url(${skyline})` }}
         />
-
+        
         {/* Animated Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-blue-800/70 to-blue-600/50 animate-pulse-slow" />
-
+        
         {/* Floating Geometric Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -224,26 +224,20 @@ export default function HomePage() {
           >
             {/* Inner glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-yellow-400/10 rounded-3xl" />
-
+            
             <div className="relative z-10">
-              {/* Marquee Badge */}
-              <div className="overflow-x-hidden relative w-full flex justify-center mb-8">
-                <motion.div
-                  className="inline-flex items-center px-6 py-2 rounded-full bg-yellow-400/20 backdrop-blur-md border border-yellow-400/30 text-yellow-300 text-sm font-semibold whitespace-nowrap"
-                  style={{ minWidth: 420 }}
-                  animate={{ x: ["-110%", "110%"] }}
-                  transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                >
-                  🏆 Saudi Arabia&apos;s Trusted Construction Partner
-                </motion.div>
-              </div>
+              {/* Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5 }}
+                className="inline-flex items-center px-6 py-2 rounded-full bg-yellow-400/20 backdrop-blur-md border border-yellow-400/30 text-yellow-300 text-sm font-semibold mb-8"
+              >
+                🏆 Saudi Arabia's Trusted Construction Partner
+              </motion.div>
 
               {/* Main Headline */}
-              <motion.h1
+              <motion.h1 
                 variants={heroTextVariants}
                 className="text-6xl md:text-8xl font-black tracking-tight text-white mb-8 leading-tight"
               >
@@ -307,7 +301,7 @@ export default function HomePage() {
                     <FaPlay className="text-sm" />
                   </span>
                 </motion.button>
-
+                
                 <motion.button
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
@@ -379,7 +373,7 @@ export default function HomePage() {
           >
             Leading Saudi Arabia's construction evolution with innovative solutions and unmatched expertise
           </motion.p>
-
+          
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
@@ -466,43 +460,57 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Clients Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            className="text-5xl font-bold text-center text-blue-900 mb-6"
-          >
-            Trusted by Saudi Arabia's Leaders
-          </motion.h2>
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto"
-          >
-            Partnering with the Kingdom's most prestigious organizations
-          </motion.p>
+ {/* Clients Section with full card marquee */}
+<section className="py-24 bg-gray-50 overflow-x-hidden">
+  <div className="container mx-auto px-4">
+    <motion.h2
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      className="text-5xl font-bold text-center text-blue-900 mb-6"
+    >
+      Trusted by Saudi Arabia's Leaders
+    </motion.h2>
+    <motion.p
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto"
+    >
+      Partnering with the Kingdom's most prestigious organizations
+    </motion.p>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {clients.map((c, idx) => (
-              <motion.div
-                key={c}
-                custom={idx}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="show"
-                className="group p-8 bg-white rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
-              >
-                <h3 className="font-bold text-lg text-blue-900 mb-2 group-hover:text-blue-700 transition-colors">{c}</h3>
-                <p className="text-gray-500 text-sm">Strategic infrastructure partner</p>
-              </motion.div>
-            ))}
+    {/* Marquee Row */}
+    <div className="relative w-full overflow-x-hidden">
+      <motion.div
+        className="flex gap-8"
+        style={{ width: "max-content" }}
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "linear",
+          duration: 22, // Adjust for scroll speed
+        }}
+      >
+        {/* Repeat two sets for smooth loop */}
+        {[...clients, ...clients].map((c, idx) => (
+          <div
+            key={c + idx}
+            className="group p-8 bg-white rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center min-w-[260px] max-w-xs"
+          >
+            <h3 className="font-bold text-lg text-blue-900 mb-2 group-hover:text-blue-700 transition-colors">
+              {c}
+            </h3>
+            <p className="text-gray-500 text-sm">Strategic infrastructure partner</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </motion.div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Contact Section */}
       <section className="py-24 bg-gradient-to-br from-blue-100 via-white to-amber-100">
@@ -515,6 +523,7 @@ export default function HomePage() {
           >
             Get in Touch
           </motion.h2>
+          
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <ContactCard
               icon="📍"
@@ -592,7 +601,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-
+          
           <div className="border-t border-gray-700 pt-8 text-center">
             <p className="text-sm text-gray-400">
               © {new Date().getFullYear()} Rayyan Al-Arab General Contracting Co. All rights reserved.
@@ -662,7 +671,7 @@ function Brand() {
 
 /* ————————————————————————————————————————
    Add these custom animations to your Tailwind config:
-
+   
    module.exports = {
      theme: {
        extend: {
