@@ -5,10 +5,12 @@ import Aboutus from "./pages/Aboutus"
 import Projects from './pages/Projects'
 import Services from './pages/Services'
 import ContactUs from './pages/ContactUs'
+import Navbar from './components/Navbar'
 function App() {
 
   return (
    <BrowserRouter>
+   <Navbar></Navbar>
       <Routes>
         <Route path='/maintenance' element={<Maintenance></Maintenance>} />
         <Route path='/' element={<Home></Home>}/>
