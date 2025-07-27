@@ -6,7 +6,6 @@
     Framer-Motion v10.
 */
 
-import React from "react";
 import { motion } from "framer-motion";
 import {
   FaEye,
@@ -342,14 +341,14 @@ export default function HomePage() {
           transition={{ delay: 2 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
         >
-          <motion.div
+          {/* <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center text-white/70 hover:text-white transition-colors cursor-pointer"
           >
             <span className="text-sm mb-2 font-medium">Scroll to explore</span>
             <FaChevronDown className="text-xl" />
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </section>
 

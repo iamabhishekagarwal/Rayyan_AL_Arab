@@ -1,0 +1,32 @@
+{
+    "badge":"🏆 Saudi Arabia's Trusted Construction Partner",
+    "titleBuilding":"Building ",
+    "titleExcellence":"Excellence",
+    "titleAcrossSaudi":"Across Saudi Arabia",
+    "titlePremier":"Premier Construction & Engineering Solutions",
+    "constructionTypes":{
+        "Electrical":"Electrical",
+        "Plumbing":"Plumbing",
+        "HVAC":"HVAC",
+        "Structural":"Structural",
+        "General Constuction":"General Construction"
+    },
+    "viewProject":"View Our Projects",
+    "Free Consultation":"Free Consultation",
+    "stat":{
+        "ProjectsCompleted":"ProjectsCompleted",
+        "YearsExperience":"YearsExperience",
+        "ClientSatisfaction":"ClientSatisfaction"
+    },
+    "AboutRayyan":"About Rayyan Al-Arab",
+    "AboutDesc":"Leading Saudi Arabia's construction evolution with innovative solutions and unmatched expertise",
+    "Vision2030":"Vision 2030 Alignment",
+    "VisionDesc":"Deliver iconic infrastructure that accelerates the Kingdom's Vision 2030 while championing sustainability and innovation.",
+    "MissionofQuality":"Mission of Quality",
+    "MissionDesc":"Innovate, build, and maintain the highest standards of safety, efficiency, and client satisfaction across all projects.",
+    "20Years":"20 Years in the Field",
+    "20YearsDesc":"500+ completed projects, 95% repeat-client ratio, and a flawless safety record across diverse sectors.",
+    "CoreServices":"Our Core Services",
+    "CoreDesc":"Comprehensive contracting solutions delivered with precision, innovation, and excellence"
+
+}
