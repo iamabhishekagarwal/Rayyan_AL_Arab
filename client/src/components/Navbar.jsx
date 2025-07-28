@@ -25,16 +25,11 @@ function Navbar() {
   };
 
   const changeLanguage = () => {
-    const newLang = currLang === "Arabic" ? "ar" : "en";
+    const newLang = i18n.language === "en" ? "ar" : "en";
     i18n.changeLanguage(newLang);
-    setCurrLang(currLang === "Arabic" ? "إنجليزي" : "Arabic");
   };
 
-  // Reset language on every route change
-  useEffect(() => {
-    i18n.changeLanguage("en");
-    setCurrLang("Arabic");
-  }, [location.pathname]); // Depend on pathname (runs on every route change)
+  const nextLangLabel = i18n.language === "en" ? "عربي" : "English";
 
   return (
     <header className="bg-white shadow-lg border-b-2 border-blue-700 sticky top-0 z-50">
@@ -85,7 +80,7 @@ function Navbar() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              {"to " + currLang}
+              {`to ${nextLangLabel}`}
             </motion.button>
           </div>
         </div>
