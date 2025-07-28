@@ -8,7 +8,7 @@ function Navbar() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState();
-  const [currLang,setCurrLang]=useState("العربية");
+  const [currLang,setCurrLang]=useState("Arabic");
   const tabs = [
     { key: "NavBarhome", route: "/" },
     { key: "NavBarabout", route: "/about" },
@@ -23,10 +23,10 @@ function Navbar() {
     if (tab) navigate(tab.route);
   };
 
-  const changeLanguage = (lng) => {
-    setCurrLang(lng=="English"?"English":"");
-    i18n.changeLanguage(lng=="English"?"ar":"en");
-    document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
+  const changeLanguage = () => {
+    i18n.changeLanguage(currLang=="Arabic"?"ar":"en");
+    document.documentElement.dir = currLang !== "Arabic" ? "rtl" : "ltr";
+    setCurrLang(currLang=="Arabic"?"إنجليزي":"Arabic");
   };
 
   return (
