@@ -12,6 +12,7 @@ import {
   FaEnvelope,
   FaPlay
 } from "react-icons/fa";
+import { ChevronLeft, ChevronRight } from "lucide-react"; // Optional: tabler or lucide-react 
 import { useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -286,7 +287,7 @@ export default function HomePage() {
               repeat: Infinity,
               repeatType: "loop",
               ease: "linear",
-              duration: 70,
+              duration: 400,
             }}
           >
             {[...clientLogos, ...clientLogos].map((imgSrc, idx) => (
