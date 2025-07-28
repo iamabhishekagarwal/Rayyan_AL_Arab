@@ -1,32 +1,178 @@
 {
-    "badge":"🏆 Saudi Arabia's Trusted Construction Partner",
-    "titleBuilding":"Building ",
-    "titleExcellence":"Excellence",
-    "titleAcrossSaudi":"Across Saudi Arabia",
-    "titlePremier":"Premier Construction & Engineering Solutions",
-    "constructionTypes":{
-        "Electrical":"Electrical",
-        "Plumbing":"Plumbing",
-        "HVAC":"HVAC",
-        "Structural":"Structural",
-        "General Constuction":"General Construction"
+    "NavBarhome": "Home",
+    "NavBarabout": "About Us",
+    "NavBarprojects": "Projects",
+    "NavBarservices": "Services",
+    "NavBarcontact": "Contact",
+    "subtitle": "Rayyan Al-Arab General Contracting",
+    "company_name": "Rayyan Al-Arab",
+    "hero": {
+        "badge": "🏆 Saudi Arabia's Trusted Construction Partner",
+        "title": {
+            "part1": "Building",
+            "part2": "Excellence",
+            "part3": "Across Saudi Arabia"
+        },
+        "subtitle": "Premier Construction & Engineering Solutions",
+        "serviceTags": {
+            "electrical": "⚡ Electrical",
+            "plumbing": "🔧 Plumbing",
+            "hvac": "🌡️ HVAC",
+            "structural": "🏗️ Structural",
+            "generalConstruction": "🏢 General Construction"
+        },
+        "companyNameArabic": "مؤسسة ريان العرب للمقاولات العامة",
+        "cta": {
+            "viewProjects": "View Our Projects",
+            "freeConsultation": "Free Consultation"
+        }
     },
-    "viewProject":"View Our Projects",
-    "Free Consultation":"Free Consultation",
-    "stat":{
-        "ProjectsCompleted":"ProjectsCompleted",
-        "YearsExperience":"YearsExperience",
-        "ClientSatisfaction":"ClientSatisfaction"
+    "stats": {
+        "projectsCompleted": "Projects Completed",
+        "yearsExperience": "Years Experience",
+        "clientSatisfaction": "Client Satisfaction"
     },
-    "AboutRayyan":"About Rayyan Al-Arab",
-    "AboutDesc":"Leading Saudi Arabia's construction evolution with innovative solutions and unmatched expertise",
-    "Vision2030":"Vision 2030 Alignment",
-    "VisionDesc":"Deliver iconic infrastructure that accelerates the Kingdom's Vision 2030 while championing sustainability and innovation.",
-    "MissionofQuality":"Mission of Quality",
-    "MissionDesc":"Innovate, build, and maintain the highest standards of safety, efficiency, and client satisfaction across all projects.",
-    "20Years":"20 Years in the Field",
-    "20YearsDesc":"500+ completed projects, 95% repeat-client ratio, and a flawless safety record across diverse sectors.",
-    "CoreServices":"Our Core Services",
-    "CoreDesc":"Comprehensive contracting solutions delivered with precision, innovation, and excellence"
-
+    "about": {
+        "title": "About Rayyan Al-Arab",
+        "subtitle": "Leading Saudi Arabia's construction evolution with innovative solutions and unmatched expertise",
+        "vision": {
+            "title": "Vision 2030 Alignment",
+            "text": "Deliver iconic infrastructure that accelerates the Kingdom's Vision 2030 while championing sustainability and innovation."
+        },
+        "mission": {
+            "title": "Mission of Quality",
+            "text": "Innovate, build, and maintain the highest standards of safety, efficiency, and client satisfaction across all projects."
+        },
+        "experience": {
+            "title": "20 Years in the Field",
+            "text": "500+ completed projects, 95% repeat-client ratio, and a flawless safety record across diverse sectors."
+        }
+    },
+    "services": {
+        "title": "Our Core Services",
+        "subtitle": "Comprehensive contracting solutions delivered with precision, innovation, and excellence",
+        "electrical": {
+            "title": "Electrical Services",
+            "desc": "Complete electrical installations, power distribution, lighting, backup systems, and smart automation with up to 40% energy savings.",
+            "bullets": [
+                "Power distribution & LV panels",
+                "Intelligent lighting systems",
+                "Emergency backup & UPS",
+                "Building automation (BMS)",
+                "24/7 emergency support"
+            ]
+        },
+        "plumbing": {
+            "title": "Plumbing & Pipelines",
+            "desc": "Professional pipeline design, water-management, and 10-year corrosion-resistant solutions for residential and industrial facilities.",
+            "bullets": [
+                "Water supply & treatment",
+                "Drainage & sewage networks",
+                "Gas pipeline installation",
+                "Grey-water recycling",
+                "Eco-flow fixtures"
+            ]
+        },
+        "structural": {
+            "title": "Structural Work",
+            "desc": "Seismic-resistant foundations, concrete super-structures, and premium steel framing—backed by a 25-year structural warranty.",
+            "bullets": [
+                "Pile & raft foundations",
+                "Post-tension slabs",
+                "Steel frame erection",
+                "Masonry & brickwork",
+                "Structural inspections"
+            ]
+        },
+        "hvac": {
+            "title": "HVAC Systems",
+            "desc": "Desert-ready HVAC delivering 30% energy savings, central plants, VRF, and smart IoT climate control.",
+            "bullets": [
+                "Chillers & AHUs",
+                "Ventilation design (ASHRAE)",
+                "VRF / VRV systems",
+                "Energy-recovery wheels",
+                "Smart thermostats"
+            ]
+        },
+        "generalConstruction": {
+            "title": "General Construction",
+            "desc": "Turn-key contracting, renovations, and fast-track design-build projects with on-time delivery guarantees.",
+            "bullets": [
+                "Design-build delivery",
+                "Interior fit-out",
+                "Civil & finishing works",
+                "Project management",
+                "Turnkey hand-over"
+            ]
+        },
+        "safety": {
+            "title": "Safety & Compliance",
+            "desc": "ISO-certified HSE programs, QA/QC, and full regulatory compliance for every project we execute.",
+            "bullets": [
+                "ISO 9001 / 45001 systems",
+                "Permit & code compliance",
+                "Site safety audits",
+                "Environmental reporting",
+                "Digital QA dashboards"
+            ]
+        }
+    },
+    "clients": {
+        "title": "Trusted by Saudi Arabia's Leaders",
+        "subtitle": "Partnering with the Kingdom's most prestigious organizations",
+        "partnerTag": "Strategic infrastructure partner"
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "office": {
+            "title": "Visit Our Office",
+            "address": [
+                "Al Ameer Majid St.",
+                "Al Aziziyah District, Jeddah",
+                "Saudi Arabia"
+            ]
+        },
+        "phone": {
+            "title": "Call Us",
+            "hours": [
+                "Business hours 09-18",
+                "Emergency 24/7"
+            ]
+        },
+        "email": {
+            "title": "Email Us",
+            "response": "Replies within 24 hrs"
+        },
+        "cta": "Request Free Consultation"
+    },
+    "footer": {
+        "companyDescription": "Building excellence with innovation and trust across Saudi Arabia's infrastructure landscape.",
+        "quickLinks": {
+            "title": "Quick Links",
+            "items": [
+                "About Us",
+                "Projects",
+                "Services",
+                "Contact"
+            ]
+        },
+        "services": {
+            "title": "Services",
+            "items": [
+                "Electrical",
+                "HVAC",
+                "Structural",
+                "General Construction"
+            ]
+        },
+        "contact": {
+            "title": "Contact"
+        },
+        "brand": {
+            "name": "Rayyan Al-Arab",
+            "type": "General Contracting"
+        },
+        "copyright": "Rayyan Al-Arab General Contracting Co. All rights reserved."
+    }
 }
