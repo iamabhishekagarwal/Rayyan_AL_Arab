@@ -29,7 +29,7 @@ function Navbar() {
     i18n.changeLanguage(newLang);
   };
 
-  const nextLangLabel = i18n.language === "en" ? "عربي" : "English";
+  const nextLangLabel = i18n.language === "en" ? "Arabic" : "English";
 
   return (
     <header className="bg-white shadow-lg border-b-2 border-blue-700 sticky top-0 z-50">
