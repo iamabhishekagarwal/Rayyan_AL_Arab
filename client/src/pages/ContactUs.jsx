@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -29,55 +31,53 @@ const ContactUs = () => {
         {/* Header */}
         <header className="text-center mb-10">
           <h1 className="text-5xl font-extrabold text-gray-800 drop-shadow mb-4" style={{ animation: 'fadeIn 1s both' }}>
-            Contact Us
+            {t("ContactUs.title")}
           </h1>
           <p className="text-gray-700 text-lg md:text-xl leading-relaxed" style={{ animation: 'fadeIn 1.5s both' }}>
-            We’d love to hear from you. Reach out to discuss your next project or any inquiries!
+            {t("ContactUs.subtitle")}
           </p>
         </header>
 
         <div className="flex flex-col md:flex-row gap-10">
           {/* Contact Information Card */}
           <div className="flex-1 bg-white bg-opacity-70 shadow-xl rounded-2xl p-8 mb-8 md:mb-0" style={{ animation: 'fadeInUp 1s both' }}>
-            <h2 className="text-2xl font-bold text-blue-800 mb-3">Our Main Office</h2>
+            <h2 className="text-2xl font-bold text-blue-800 mb-3">{t("ContactUs.office.title")}</h2>
             <div className="mb-6 flex items-start gap-3">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-700 mr-2 text-2xl">📍</span>
               <span>
-                <strong>Address:</strong>
+                <strong>{t("ContactUs.address")}:</strong>
                 <br />
-                Al Ameer Majid Street,
-                <br />
-                Al Aziziyah District, Jeddah
+                {t("ContactUs.address.value")}
               </span>
             </div>
             <div className="mb-6 flex items-start gap-3">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-700 mr-2 text-2xl">✉️</span>
               <span>
-                <strong>Email:</strong>
+                <strong>{t("ContactUs.email")}:</strong>
                 <br />
                 <a href="mailto:info@alrayyanalarab.co" className="text-blue-700 underline">
-                  info@alrayyanalarab.co
+                  {t("ContactUs.email.value")}
                 </a>
               </span>
             </div>
             <div className="mb-4 flex items-start gap-3">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 text-yellow-700 mr-2 text-2xl">📞</span>
               <span>
-                <strong>Phone:</strong>
+                <strong>{t("ContactUs.phone")}:</strong>
                 <br />
-                <a href="tel:+96612545933" className="text-blue-700 underline">+966 12 545 933</a>
+                <a href="tel:+96612545933" className="text-blue-700 underline">{t("ContactUs.phone.value")}</a>
               </span>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="flex-1 bg-white bg-opacity-70 shadow-xl rounded-2xl p-8" style={{ animation: 'fadeInUp 1s 0.3s both' }}>
-            <h2 className="text-2xl font-bold text-blue-800 mb-3">Send Us a Message</h2>
+            <h2 className="text-2xl font-bold text-blue-800 mb-3">{t("ContactUs.form.title")}</h2>
             {!submitted ? (
               <form className="space-y-6" onSubmit={handleSubmit} noValidate>
                 <div>
                   <label htmlFor="name" className="block text-gray-700 font-semibold mb-1">
-                    Name
+                    {t("ContactUs.form.name")}
                   </label>
                   <input
                     id="name"
@@ -92,7 +92,7 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-gray-700 font-semibold mb-1">
-                    Email
+                    {t("ContactUs.form.email")}
                   </label>
                   <input
                     id="email"
@@ -107,7 +107,7 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-gray-700 font-semibold mb-1">
-                    Message
+                    {t("ContactUs.form.message")}
                   </label>
                   <textarea
                     id="message"
@@ -123,7 +123,7 @@ const ContactUs = () => {
                   type="submit"
                   className="w-full bg-blue-700 text-white py-3 rounded-full font-bold text-lg hover:bg-blue-900 transition"
                 >
-                  Send Message
+                  {t("ContactUs.form.submit")}
                 </button>
               </form>
             ) : (
@@ -144,10 +144,10 @@ const ContactUs = () => {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-green-700 mb-2">
-                  Thank you!
+                  {t("ContactUs.form.success.title")}
                 </h3>
                 <p className="text-gray-700">
-                  We've received your message and will get back to you soon.
+                  {t("ContactUs.form.success.message")}
                 </p>
               </div>
             )}

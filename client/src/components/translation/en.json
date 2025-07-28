@@ -174,5 +174,259 @@
             "type": "General Contracting"
         },
         "copyright": "Rayyan Al-Arab General Contracting Co. All rights reserved."
+    },
+    "ContactUs": {
+        "title": "Contact Us",
+        "subtitle": "We'd love to hear from you. Reach out to discuss your next project or any inquiries!",
+        "office": {
+            "title": "Our Main Office"
+        },
+        "address": "Address",
+        "address.value": "Al Ameer Majid Street,\nAl Aziziyah District, Jeddah",
+        "email": "Email",
+        "email.value": "info@alrayyanalarab.co",
+        "phone": "Phone",
+        "phone.value": "+966 12 545 933",
+        "form": {
+            "title": "Send Us a Message",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send Message",
+            "success": {
+                "title": "Thank you!",
+                "message": "We've received your message and will get back to you soon."
+            }
+        }
+    },
+    "Services": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive engineering, construction, and infrastructure services delivered with quality, safety, and sustainability at the forefront.",
+        "categories": {
+            "electrical": {
+                "title": "Electrical Services",
+                "summary": "Complete electrical installations, wiring, panel upgrades, and maintenance for all project types. We ensure efficient energy distribution and safe installations for residential, commercial, and industrial projects.",
+                "items": [
+                    "Power distribution systems",
+                    "Lighting installations (indoor, outdoor, decorative & industrial)",
+                    "Emergency backup systems (generators, UPS)",
+                    "Electrical panel upgrades & load balancing",
+                    "Smart home & automation systems",
+                    "Electrical safety inspections and certifications"
+                ]
+            },
+            "plumbing": {
+                "title": "Plumbing & Pipelines",
+                "summary": "Professional plumbing installations, pipeline systems, and water management solutions tailored to meet modern infrastructure needs.",
+                "items": [
+                    "Water supply systems (residential, commercial, industrial)",
+                    "Drainage & sewage systems with clog protection",
+                    "Gas pipeline installation & leak detection",
+                    "Water treatment & filtration systems",
+                    "Rainwater harvesting & greywater recycling",
+                    "Plumbing repairs, retrofits, and maintenance"
+                ]
+            },
+            "structural": {
+                "title": "Structural Work",
+                "summary": "Foundation work, concrete structures, steel framing, and all structural construction needs are met with precision and durability.",
+                "items": [
+                    "Foundation & concrete work (slabs, footings, driveways)",
+                    "Steel frame construction (residential & commercial)",
+                    "Masonry & brickwork (walls, columns, decorative features)",
+                    "Reinforcement and formwork installation",
+                    "Retrofitting and seismic strengthening",
+                    "Structural inspections & certifications"
+                ]
+            },
+            "hvac": {
+                "title": "HVAC Systems",
+                "summary": "Heating, ventilation, and air conditioning systems for optimal climate control, designed with efficiency and sustainability in mind.",
+                "items": [
+                    "Central air systems (residential & commercial)",
+                    "Ventilation design for air quality & circulation",
+                    "Energy-efficient solutions & green HVAC upgrades",
+                    "Split, VRF, and ductless systems",
+                    "Preventive maintenance & system diagnostics",
+                    "Smart HVAC integrations & automation"
+                ]
+            },
+            "general": {
+                "title": "General Construction",
+                "summary": "Complete construction services including renovations, additions, and new builds, tailored to each client’s vision and needs.",
+                "items": [
+                    "Interior & exterior work (flooring, drywall, painting)",
+                    "Renovations & remodeling (kitchens, bathrooms, offices)",
+                    "Project management & site supervision",
+                    "Turnkey construction solutions",
+                    "Budgeting & procurement support",
+                    "Skilled labor & subcontractor coordination"
+                ]
+            },
+            "safety": {
+                "title": "Safety & Compliance",
+                "summary": "Ensuring all work meets safety standards and building codes with proper certifications and transparent documentation.",
+                "items": [
+                    "Building code compliance consulting",
+                    "Safety inspections & audits (pre- and post-construction)",
+                    "Quality assurance and risk mitigation",
+                    "Worker safety training & PPE enforcement",
+                    "Fire safety systems & emergency protocols",
+                    "Environmental compliance & waste management"
+                ]
+            }
+        }
+    },
+    "Projects": {
+        "title": "Our Projects",
+        "subtitle": "Discover our portfolio of ambitious projects for renowned public and private clients across Saudi Arabia and the UAE, spanning key industries: energy, infrastructure, housing, water, transport, and more.",
+        "items": {
+            "aramco": {
+                "title": "Saudi Aramco",
+                "description": "We executed electrical, mechanical, and structural works for key Saudi Aramco facilities, focusing on energy efficiency, industrial safety, and adherence to global oil & gas standards."
+            },
+            "royal_commission": {
+                "title": "Royal Commission Jubail, Yanbu & Jizan",
+                "description": "Our collaboration with the Royal Commission included infrastructure development, HVAC installation, and general construction within industrial cities, supporting Saudi Arabia's Vision 2030 goals."
+            },
+            "housing": {
+                "title": "Ministry of Housing",
+                "description": "We supported national housing projects by providing electrical, plumbing, and structural services to ensure quality living spaces across newly developed residential zones."
+            },
+            "municipal": {
+                "title": "Ministry of Municipal & Rural Affairs",
+                "description": "We contributed to municipal infrastructure by executing pipeline networks, drainage systems, and urban renovation projects that enhanced the sustainability and liveability of rural and urban areas."
+            },
+            "water_electricity": {
+                "title": "Ministry of Water & Electricity",
+                "description": "Our services included installation and maintenance of water supply lines, power distribution systems, and smart energy solutions to meet critical utility needs across various regions."
+            },
+            "transportation": {
+                "title": "Ministry of Transportation",
+                "description": "We carried out essential civil and structural works related to transportation infrastructure such as bridges, roadside facilities, and support structures, ensuring compliance with transportation safety codes."
+            },
+            "Salini":{
+                "title":"Salini Saudi Arabia",
+                "description":"Structural & building construction support for mega projects. We are actively involved in Salini’s high-rise and infrastructure projects, delivering full-scale building construction services. Our scope includes foundation work, concrete casting, steel structure erection, and blockwork, ensuring structural durability and adherence to international standards."
+            },
+            "Skylark":{
+                "title":"Skylark",
+                "description":"Residential and commercial building construction. We’ve partnered with Skylark to execute complete building construction for residential villas and commercial facilities. Our services include civil structure work, internal finishing, electrical and plumbing installations, and external works, delivered with precision and on-time execution."
+            }
+        }
+    },
+    "About": {
+        "header": {
+            "tagline": "Building Tomorrow's Skylines",
+            "title": "About Us",
+            "description": "Rayyan Al-Arab General Contracting Co. delivers excellence across Saudi Arabia and the UAE through innovative construction solutions."
+        },
+        "pillars": {
+            "who_we_are": {
+                "title": "Who We Are",
+                "description": "We provide end-to-end services for residential, commercial, and industrial sectors with a reputation built on quality, integrity, and client satisfaction."
+            },
+            "our_vision": {
+                "title": "Our Vision",
+                "description": "To deliver reliable, cost-effective engineering solutions while ensuring safety, sustainability, and customer delight at every project stage."
+            },
+            "our_mission": {
+                "title": "Our Mission",
+                "description": "Combining technical expertise, innovation, and collaboration to build lasting structures that fuel economic and social growth."
+            }
+        },
+        "stats": {
+            "experience": {
+                "value": "25+",
+                "label": "Years of Experience"
+            },
+            "projects": {
+                "value": "200+",
+                "label": "Projects Delivered"
+            },
+            "clients": {
+                "value": "75+",
+                "label": "Prestigious Clients"
+            },
+            "awards": {
+                "value": "12",
+                "label": "Awards Won"
+            }
+        },
+        "services": {
+            "title": "Core Services",
+            "items": {
+                "residential": {
+                    "title": "Residential Construction",
+                    "description": "Custom homes and apartment complexes designed to the highest standards."
+                },
+                "commercial": {
+                    "title": "Commercial Projects",
+                    "description": "Offices, retail spaces, and mixed-use developments tailored to business needs."
+                },
+                "industrial": {
+                    "title": "Industrial Facilities",
+                    "description": "Robust structures engineered for heavy industry and logistics."
+                },
+                "design": {
+                    "title": "Design & Build Solutions",
+                    "description": "Integrated concept-to-completion delivery for maximum efficiency."
+                }
+            }
+        },
+        "values": {
+            "title": "Core Values",
+            "items": {
+                "integrity": {
+                    "title": "Integrity",
+                    "description": "We uphold the highest standards of honesty in every partnership."
+                },
+                "quality": {
+                    "title": "Quality",
+                    "description": "Durable, high-caliber structures that surpass expectations."
+                },
+                "innovation": {
+                    "title": "Innovation",
+                    "description": "New technologies and creative processes drive value."
+                },
+                "safety": {
+                    "title": "Safety",
+                    "description": "Protecting people and communities is our top priority."
+                },
+                "sustainability": {
+                    "title": "Sustainability",
+                    "description": "Environmentally responsible practices for a greener future."
+                }
+            }
+        },
+        "process": {
+            "title": "Our Process",
+            "steps": {
+                "consultation": "Consultation: Understanding goals, site, and budget.",
+                "planning": "Planning & Design: Detailed blueprints for safety and sustainability.",
+                "permitting": "Permitting & Approvals: Seamless coordination with authorities.",
+                "building": "Building & Execution: Expert teams and premium materials.",
+                "quality": "Quality Assurance: Rigorous inspections at every phase.",
+                "handover": "Handover & Support: Training and post-completion maintenance."
+            }
+        },
+        "testimonials": {
+            "title": "Testimonials",
+            "items": {
+                "testimonial1": {
+                    "quote": "Rayyan Al-Arab delivered our new headquarters ahead of schedule with exceptional quality—exceeding every expectation.",
+                    "author": "CEO, Major GCC Corporation"
+                },
+                "testimonial2": {
+                    "quote": "From planning to execution, the team maintained open communication, flexibility, and full transparency.",
+                    "author": "Infrastructure Client, UAE"
+                }
+            }
+        },
+        "cta": {
+            "title": "Ready to Build the Future?",
+            "description": "Contact us to discover how Rayyan Al-Arab can bring your vision to life—safely and sustainably.",
+            "button": "Get in Touch"
+        }
     }
 }

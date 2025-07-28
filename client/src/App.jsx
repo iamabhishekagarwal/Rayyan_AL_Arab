@@ -7,7 +7,6 @@ import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
 import Navbar from "./components/Navbar";
 import { I18nextProvider } from "react-i18next";
-import i18 from "./components/i18n";
 function App() {
   return (
     <BrowserRouter>
