@@ -20,12 +20,20 @@ import {
   FaPlay
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import skyline from "../assets/skyLineBG2.jpg";
+import { useState,useEffect } from "react";
+const loadClientLogos = async () => {
+const imageModules = import.meta.glob("../assets/*.webp", { eager: true });
+return Object.values(imageModules).map((mod) => mod.default);
+};
 
 export default function HomePage() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const handleNav = (path) => navigate(path);
+  const [clientLogos, setClientLogos] = useState([]);
+
+  useEffect(() => {
+    loadClientLogos().then(setClientLogos);
+  }, []);
 
   /* ───────────────────────────────
      Static data (now via i18n keys)
@@ -326,24 +334,96 @@ function AboutCards({ fadeUp, t }) {
             variants={fadeUp}
             initial="hidden"
             whileInView="show"
-            className="group p-8 rounded-2xl bg-white/80 backdrop-blur-lg shadow-xl border border-gray-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
+            className="text-center mb-16"
           >
-            <div
-              className={`w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br ${card.color} text-white text-3xl group-hover:scale-110 transition-transform duration-300`}
-            >
-              {card.icon}
-            </div>
-            <h3 className="font-bold text-2xl mb-4 text-center text-gray-800">
-              {card.title}
-            </h3>
-            <p className="text-gray-600 text-center leading-relaxed">{card.text}</p>
+            <h2 className="text-5xl font-bold text-blue-900 mb-6">Our Core Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive contracting solutions delivered with precision, innovation, and excellence
+            </p>
           </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+            {services.map((srv, idx) => (
+              <motion.div
+                key={srv.title}
+                custom={idx}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                className="group relative p-8 rounded-2xl bg-white/80 backdrop-blur shadow-xl border border-gray-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
+              >
+                <div className="flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {srv.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-4 text-center">
+                  {srv.title}
+                </h3>
+                <p className="text-gray-700 mb-6 text-center">{srv.desc}</p>
+                <ul className="space-y-2">
+                  {srv.bullets.map((b) => (
+                    <li key={b} className="flex items-center gap-3 text-gray-600">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0" />
+                      <span className="text-sm">{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+ {/* Clients Section with full card marquee */}
+{/* Clients Section with Logos in Marquee Style */}
+<section className="py-24 bg-gray-50 overflow-x-hidden">
+      <div className="container mx-auto px-4">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          className="text-5xl font-bold text-center text-blue-900 mb-6"
+        >
+          Trusted by Saudi Arabia's Leaders
+        </motion.h2>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto"
+        >
+          Partnering with the Kingdom's most prestigious organizations
+        </motion.p>
+
+        {/* Marquee Logo Row */}
+        <div className="relative w-full overflow-x-hidden">
+          <motion.div
+            className="flex gap-12"
+            style={{ width: "max-content" }}
+            animate={{ x: ["0%", "-100%"] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+              duration: 70,
+            }}
+          >
+            {[...clientLogos, ...clientLogos].map((imgSrc, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.05, y: -4 }}
+                className="flex-shrink-0 bg-white p-6 rounded-2xl shadow-md border border-gray-200 w-64 h-40 flex items-center justify-center"
+              >
+                <img
+                  src={imgSrc}
+                  alt={`Client logo ${idx + 1}`}
+                  className="max-h-full max-w-full object-contain"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
 function ServicesSection({ fadeUp, services, t }) {
   return (
     <section className="py-24 bg-gradient-to-r from-blue-50 via-white to-amber-50 relative overflow-hidden">
