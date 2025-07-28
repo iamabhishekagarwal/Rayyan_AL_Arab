@@ -7,7 +7,9 @@ const projectKeys = [
   "housing",
   "municipal",
   "water_electricity",
-  "transportation"
+  "transportation",
+  "Salini",
+  "Skylark"
 ];
 
 const Projects = () => {

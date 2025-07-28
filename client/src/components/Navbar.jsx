@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom"; // Add useLocation
 import { useTranslation } from "react-i18next";
 import i18n from "../components/i18n";
 
 function Navbar() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation(); // Track current route
   const [activeTab, setActiveTab] = useState();
-  const [currLang,setCurrLang]=useState("Arabic");
+  const [currLang, setCurrLang] = useState("Arabic");
   const tabs = [
     { key: "NavBarhome", route: "/" },
     { key: "NavBarabout", route: "/about" },
@@ -24,14 +25,16 @@ function Navbar() {
   };
 
   const changeLanguage = () => {
-    i18n.changeLanguage(currLang=="Arabic"?"ar":"en");
-    setCurrLang(currLang=="Arabic"?"إنجليزي":"Arabic");
+    const newLang = currLang === "Arabic" ? "ar" : "en";
+    i18n.changeLanguage(newLang);
+    setCurrLang(currLang === "Arabic" ? "إنجليزي" : "Arabic");
   };
 
-  useEffect(()=>{
+  // Reset language on every route change
+  useEffect(() => {
     i18n.changeLanguage("en");
-    setCurrLang("Arabic")
-  },[])
+    setCurrLang("Arabic");
+  }, [location.pathname]); // Depend on pathname (runs on every route change)
 
   return (
     <header className="bg-white shadow-lg border-b-2 border-blue-700 sticky top-0 z-50">
@@ -82,7 +85,7 @@ function Navbar() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              {"to "+currLang}
+              {"to " + currLang}
             </motion.button>
           </div>
         </div>

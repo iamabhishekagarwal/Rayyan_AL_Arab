@@ -304,7 +304,129 @@
             "transportation": {
                 "title": "Ministry of Transportation",
                 "description": "We carried out essential civil and structural works related to transportation infrastructure such as bridges, roadside facilities, and support structures, ensuring compliance with transportation safety codes."
+            },
+            "Salini":{
+                "title":"Salini Saudi Arabia",
+                "description":"Structural & building construction support for mega projects. We are actively involved in Salini’s high-rise and infrastructure projects, delivering full-scale building construction services. Our scope includes foundation work, concrete casting, steel structure erection, and blockwork, ensuring structural durability and adherence to international standards."
+            },
+            "Skylark":{
+                "title":"Skylark",
+                "description":"Residential and commercial building construction. We’ve partnered with Skylark to execute complete building construction for residential villas and commercial facilities. Our services include civil structure work, internal finishing, electrical and plumbing installations, and external works, delivered with precision and on-time execution."
             }
+        }
+    },
+    "About": {
+        "header": {
+            "tagline": "Building Tomorrow's Skylines",
+            "title": "About Us",
+            "description": "Rayyan Al-Arab General Contracting Co. delivers excellence across Saudi Arabia and the UAE through innovative construction solutions."
+        },
+        "pillars": {
+            "who_we_are": {
+                "title": "Who We Are",
+                "description": "We provide end-to-end services for residential, commercial, and industrial sectors with a reputation built on quality, integrity, and client satisfaction."
+            },
+            "our_vision": {
+                "title": "Our Vision",
+                "description": "To deliver reliable, cost-effective engineering solutions while ensuring safety, sustainability, and customer delight at every project stage."
+            },
+            "our_mission": {
+                "title": "Our Mission",
+                "description": "Combining technical expertise, innovation, and collaboration to build lasting structures that fuel economic and social growth."
+            }
+        },
+        "stats": {
+            "experience": {
+                "value": "25+",
+                "label": "Years of Experience"
+            },
+            "projects": {
+                "value": "200+",
+                "label": "Projects Delivered"
+            },
+            "clients": {
+                "value": "75+",
+                "label": "Prestigious Clients"
+            },
+            "awards": {
+                "value": "12",
+                "label": "Awards Won"
+            }
+        },
+        "services": {
+            "title": "Core Services",
+            "items": {
+                "residential": {
+                    "title": "Residential Construction",
+                    "description": "Custom homes and apartment complexes designed to the highest standards."
+                },
+                "commercial": {
+                    "title": "Commercial Projects",
+                    "description": "Offices, retail spaces, and mixed-use developments tailored to business needs."
+                },
+                "industrial": {
+                    "title": "Industrial Facilities",
+                    "description": "Robust structures engineered for heavy industry and logistics."
+                },
+                "design": {
+                    "title": "Design & Build Solutions",
+                    "description": "Integrated concept-to-completion delivery for maximum efficiency."
+                }
+            }
+        },
+        "values": {
+            "title": "Core Values",
+            "items": {
+                "integrity": {
+                    "title": "Integrity",
+                    "description": "We uphold the highest standards of honesty in every partnership."
+                },
+                "quality": {
+                    "title": "Quality",
+                    "description": "Durable, high-caliber structures that surpass expectations."
+                },
+                "innovation": {
+                    "title": "Innovation",
+                    "description": "New technologies and creative processes drive value."
+                },
+                "safety": {
+                    "title": "Safety",
+                    "description": "Protecting people and communities is our top priority."
+                },
+                "sustainability": {
+                    "title": "Sustainability",
+                    "description": "Environmentally responsible practices for a greener future."
+                }
+            }
+        },
+        "process": {
+            "title": "Our Process",
+            "steps": {
+                "consultation": "Consultation: Understanding goals, site, and budget.",
+                "planning": "Planning & Design: Detailed blueprints for safety and sustainability.",
+                "permitting": "Permitting & Approvals: Seamless coordination with authorities.",
+                "building": "Building & Execution: Expert teams and premium materials.",
+                "quality": "Quality Assurance: Rigorous inspections at every phase.",
+                "handover": "Handover & Support: Training and post-completion maintenance."
+            }
+        },
+        "testimonials": {
+            "title": "Testimonials",
+            "items": {
+                "testimonial1": {
+                    "quote": "Rayyan Al-Arab delivered our new headquarters ahead of schedule with exceptional quality—exceeding every expectation.",
+                    "author": "CEO, Major GCC Corporation"
+                },
+                "testimonial2": {
+                    "quote": "From planning to execution, the team maintained open communication, flexibility, and full transparency.",
+                    "author": "Infrastructure Client, UAE"
+                }
+            }
+        },
+        "cta": {
+            "title": "Ready to Build the Future?",
+            "description": "Contact us to discover how Rayyan Al-Arab can bring your vision to life—safely and sustainably.",
+            "button": "Get in Touch"
         }
     }
 }
