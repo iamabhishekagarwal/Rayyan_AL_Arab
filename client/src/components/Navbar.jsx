@@ -25,9 +25,13 @@ function Navbar() {
 
   const changeLanguage = () => {
     i18n.changeLanguage(currLang=="Arabic"?"ar":"en");
-    document.documentElement.dir = currLang !== "Arabic" ? "rtl" : "ltr";
     setCurrLang(currLang=="Arabic"?"إنجليزي":"Arabic");
   };
+
+  useEffect(()=>{
+    i18n.changeLanguage("en");
+    setCurrLang("Arabic")
+  },[])
 
   return (
     <header className="bg-white shadow-lg border-b-2 border-blue-700 sticky top-0 z-50">

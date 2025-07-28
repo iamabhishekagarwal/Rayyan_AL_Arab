@@ -1,10 +1,3 @@
-/*  src/pages/HomePage.jsx
-    ————————————————————————————————————————
-    Modern, glassmorphism-inspired homepage for
-    Rayyan Al-Arab General Contracting Co.
-    Internationalised with react-i18next.
-*/
-
 import { motion } from "framer-motion";
 import {
   FaEye,
@@ -19,14 +12,23 @@ import {
   FaEnvelope,
   FaPlay
 } from "react-icons/fa";
+import { useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import skyline from "../assets/skyLineBG2.jpg";
+const loadClientLogos = async () => {
+  const imageModules = import.meta.glob("../assets/*.webp", { eager: true });
+  return Object.values(imageModules).map((mod) => mod.default);
+};
 
 export default function HomePage() {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [clientLogos, setClientLogos] = useState([]);
 
+  useEffect(() => {
+    loadClientLogos().then(setClientLogos);
+  }, []);
   /* ───────────────────────────────
      Static data (now via i18n keys)
   */
@@ -255,7 +257,55 @@ export default function HomePage() {
       <ServicesSection fadeUp={fadeUp} services={services} t={t} />
 
       {/* Clients Section */}
-      <ClientsSection fadeUp={fadeUp} clients={clients} t={t} />
+      <section className="py-24 bg-gray-50 overflow-x-hidden">
+      <div className="container mx-auto px-4">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          className="text-5xl font-bold text-center text-blue-900 mb-6"
+        >
+          {t("clients.title")}
+        </motion.h2>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto"
+        >
+          {t("clients.subtitle")}
+        </motion.p>
+
+        {/* Marquee Logo Row */}
+        <div className="relative w-full overflow-x-hidden">
+          <motion.div
+            className="flex gap-12"
+            style={{ width: "max-content" }}
+            animate={{ x: ["0%", "-100%"] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+              duration: 70,
+            }}
+          >
+            {[...clientLogos, ...clientLogos].map((imgSrc, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.05, y: -4 }}
+                className="flex-shrink-0 bg-white p-6 rounded-2xl shadow-md border border-gray-200 w-64 h-40 flex items-center justify-center"
+              >
+                <img
+                  src={imgSrc}
+                  alt={`Client logo ${idx + 1}`}
+                  className="max-h-full max-w-full object-contain"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
 
       {/* Contact Section */}
       <ContactSection fadeUp={fadeUp} t={t} />
@@ -389,59 +439,6 @@ function ServicesSection({ fadeUp, services, t }) {
               </ul>
             </motion.div>
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ClientsSection({ fadeUp, clients, t }) {
-  return (
-    <section className="py-24 bg-gray-50 overflow-x-hidden">
-      <div className="container mx-auto px-4">
-        <motion.h2
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          className="text-5xl font-bold text-center text-blue-900 mb-6"
-        >
-          {t("clients.title")}
-        </motion.h2>
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto"
-        >
-          {t("clients.subtitle")}
-        </motion.p>
-
-        <div className="relative w-full overflow-x-hidden">
-          <motion.div
-            className="flex gap-8"
-            style={{ width: "max-content" }}
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "loop",
-              ease: "linear",
-              duration: 22
-            }}
-          >
-            {[...clients, ...clients].map((c, idx) => (
-              <div
-                key={c + idx}
-                className="group p-8 bg-white rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center min-w-[260px] max-w-xs"
-              >
-                <h3 className="font-bold text-lg text-blue-900 mb-2 group-hover:text-blue-700 transition-colors">
-                  {c}
-                </h3>
-                <p className="text-gray-500 text-sm">
-                  {t("clients.partnerTag")}
-                </p>
-              </div>
-            ))}
-          </motion.div>
         </div>
       </div>
     </section>
