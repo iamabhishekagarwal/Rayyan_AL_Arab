@@ -23,10 +23,20 @@ import {
 } from "react-icons/fa";
 import skyline from "../assets/skyLineBG2.jpg";
 import { useNavigate } from "react-router-dom";
+import { useState,useEffect } from "react";
+const loadClientLogos = async () => {
+const imageModules = import.meta.glob("../assets/*.webp", { eager: true });
+return Object.values(imageModules).map((mod) => mod.default);
+};
 
 export default function HomePage() {
   const navigate = useNavigate();
   const handleNav = (path) => navigate(path);
+  const [clientLogos, setClientLogos] = useState([]);
+
+  useEffect(() => {
+    loadClientLogos().then(setClientLogos);
+  }, []);
 
   /* ───────────────────────────────────────────
      Static data
@@ -460,54 +470,57 @@ export default function HomePage() {
       </section>
 
  {/* Clients Section with full card marquee */}
+{/* Clients Section with Logos in Marquee Style */}
 <section className="py-24 bg-gray-50 overflow-x-hidden">
-  <div className="container mx-auto px-4">
-    <motion.h2
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="show"
-      className="text-5xl font-bold text-center text-blue-900 mb-6"
-    >
-      Trusted by Saudi Arabia's Leaders
-    </motion.h2>
-    <motion.p
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="show"
-      className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto"
-    >
-      Partnering with the Kingdom's most prestigious organizations
-    </motion.p>
+      <div className="container mx-auto px-4">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          className="text-5xl font-bold text-center text-blue-900 mb-6"
+        >
+          Trusted by Saudi Arabia's Leaders
+        </motion.h2>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto"
+        >
+          Partnering with the Kingdom's most prestigious organizations
+        </motion.p>
 
-    {/* Marquee Row */}
-    <div className="relative w-full overflow-x-hidden">
-      <motion.div
-        className="flex gap-8"
-        style={{ width: "max-content" }}
-        animate={{ x: ["0%", "-100%"] }}
-        transition={{
-          repeat: Infinity,
-          repeatType: "loop",
-          ease: "linear",
-          duration: 22, // Adjust for scroll speed
-        }}
-      >
-        {/* Repeat two sets for smooth loop */}
-        {[...clients, ...clients].map((c, idx) => (
-          <div
-            key={c + idx}
-            className="group p-8 bg-white rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center min-w-[260px] max-w-xs"
+        {/* Marquee Logo Row */}
+        <div className="relative w-full overflow-x-hidden">
+          <motion.div
+            className="flex gap-12"
+            style={{ width: "max-content" }}
+            animate={{ x: ["0%", "-100%"] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+              duration: 70,
+            }}
           >
-            <h3 className="font-bold text-lg text-blue-900 mb-2 group-hover:text-blue-700 transition-colors">
-              {c}
-            </h3>
-            <p className="text-gray-500 text-sm">Strategic infrastructure partner</p>
-          </div>
-        ))}
-      </motion.div>
-    </div>
-  </div>
-</section>
+            {[...clientLogos, ...clientLogos].map((imgSrc, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.05, y: -4 }}
+                className="flex-shrink-0 bg-white p-6 rounded-2xl shadow-md border border-gray-200 w-64 h-40 flex items-center justify-center"
+              >
+                <img
+                  src={imgSrc}
+                  alt={`Client logo ${idx + 1}`}
+                  className="max-h-full max-w-full object-contain"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+
 
 
 
